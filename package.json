@@ -23,5 +23,6 @@
   "homepage": "https://github.com/luccara123/Readme-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.2"
-  }
+  },
+  "devDependencies": {}
 }
