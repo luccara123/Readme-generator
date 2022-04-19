@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./Utils/generateMarkdown");
+const generateMarkdown = require("./Develop/utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -99,10 +99,10 @@ const questions = [
 
     //LICENSE
     {
-        type: 'checkbox',
-        name: 'licesing',
+        type: 'list',
+        name: 'license',
         message: 'Choose a license for your project (Required)',
-        choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None'],
+        choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public'],
         validate: licensingCheckbox => {
             if (licensingCheckbox) {
                 return true;
@@ -146,7 +146,7 @@ const questions = [
 ]
 
 // TODO: Create a function to write README file
-function writeToFile(fileNmae, data){
+function writeToFile(fileName, data){
     fs.writeFile(`${fileName}.md`, generateMarkdown(data), (err) => {
         if (err)
           throw err;
