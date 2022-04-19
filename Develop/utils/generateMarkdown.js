@@ -13,13 +13,13 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license){
     case "Apache":
-      return "https://img.shields.io/badge/License-Apache_2.0-blue.svg";
+      return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
     case "MIT":
-      return "https://img.shields.io/badge/License-MIT-yellow.svg";
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
     case"Mozilla-Public":
-      return "https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg";
+      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
     case "GNU-General-Public":
-      return "https://img.shields.io/badge/License-GPLv3-blue.svg";
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     default:
       return "";
   }
